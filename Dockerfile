@@ -30,8 +30,5 @@ RUN docker-php-ext-configure gd
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sodium zip
 
-# Copy config
-ADD php.ini /usr/local/etc/php/
-
 # add as you need
 WORKDIR /var/www/symfony

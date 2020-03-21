@@ -32,5 +32,7 @@ RUN docker-php-ext-configure gd
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sodium zip
 
+RUN echo "memory_limit=-1" > /usr/local/etc/php/conf.d/memory-limit.ini
+
 # add as you need
 WORKDIR /var/www/symfony
